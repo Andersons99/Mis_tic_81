@@ -3,13 +3,13 @@
 @{
 }
  
-<div class = "text-center">
-<form method = "POST">
+<div class="text-center">
+<form method="POST">
   <label for="descripcion" class="form-label">descripcion:</label>
-  <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" required minlength="3"  asp-for="Encomienda.descripcion">
+  <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="descripcion" required minlength="8" asp-for="Encomienda.descripcion">
   <span class="text-danger" asp-validation-for="Encomienda.descripcion"></span> <br>
   <label for="peso" class="form-label">peso:</label>
-  <input type="number" class="form-control" id="peso" name="peso" placeholder="peso" asp-for="Encomienda.peso">
+  <input type="number" class="form-control" id="peso" name="peso" placeholder="peso" required asp-for="Encomienda.peso">
   <span class="text-danger" asp-validation-for="Encomienda.descripcion"></span> <br>
   <label for="tipo" class="form-label">tipo:</label>
   <select name="tipo" id="tipo" class="form-control" asp-for="Encomienda.tipo">

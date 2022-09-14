@@ -6,12 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
- 
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
     public class ListEncomiendaModel : PageModel
     {
-        
+       
         private readonly RepositorioEncomiendas repositorioEncomiendas;
         public IEnumerable<Encomienda> Encomiendas {get;set;}
         [BindProperty]
@@ -20,12 +19,11 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         {
             this.repositorioEncomiendas=repositorioEncomiendas;
         }
- 
         public void OnGet()
         {
             Encomiendas=repositorioEncomiendas.GetAll();
         }
-         public IActionResult OnPost()
+        public IActionResult OnPost()
         {
             if(Encomienda.id>0)
             {
@@ -33,5 +31,6 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             }
             return RedirectToPage("./List");
         }
+
     }
 }

@@ -23,9 +23,8 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         public IActionResult OnGet(int encomiendaId)
         {
             Encomienda=repositorioEncomiendas.GetWithId(encomiendaId);
-            return Page(); 
+            return Page();
         }
- 
         public IActionResult OnPost()
         {
             if(!ModelState.IsValid)
@@ -38,6 +37,5 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             }
             return RedirectToPage("./List");
         }
- 
     }
 }

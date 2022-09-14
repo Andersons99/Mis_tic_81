@@ -9,5 +9,5 @@ namespace ProyectoCiclo3.App.Dominio{
         public string telefono { get; set; }
         public string ciudad { get; set; }
     }
- 
+
 }

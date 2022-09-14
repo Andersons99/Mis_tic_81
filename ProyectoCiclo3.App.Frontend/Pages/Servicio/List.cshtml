@@ -1,44 +1,41 @@
 @page
+@model ProyectoCiclo3.App.Frontend.Pages.ListServicioModel
 @{
 }
  
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">Itm</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellidos</th>
-      <th scope="col">Dirección</th>
-      <th scope="col">Teléfono</th>
+      <th>Id</th>
+      <th>Origen</th>
+      <th>Destino</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Encomienda</th>
+      <th>Acciones</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Anderson </td>
-      <td>Sanchez</td>
-      <td>Calle 22</td>
-      <td>54454</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>lina</td>
-      <td>Ortiz</td>
-      <td>calle 25</td>
-      <td>85858</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Julio</td>
-      <td>Arias</td>
-      <td>cra 50 </td>
-      <td>54545</td>
-    </tr>
-    <th scope="row">4</th>
-      <td>Diego </td>
-      <td>Perez</td>
-      <td>car 20 </td>
-      <td>30250021</td>
-    </tr>
+     @foreach (var servicio in Model.Servicios)
+    {
+        <tr>
+            <td>@servicio.id</td>
+            <td>@servicio.origen</td>
+            <td>@servicio.destino</td>
+            <td>@servicio.fecha</td>
+            <td>@servicio.hora</td>
+            <td>@servicio.encomienda</td>
+            <td>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a class="btn btn-info" asp-page="./Details" asp-route-encomiendaId="@servicio.id"><i class="fas fa-adjust"></i>Ver</a>
+				        <a class="btn btn-info" asp-page="./Edit" asp-route-encomiendaId="@servicio.id">Editar</a>
+                <form method="POST">
+                  <input type="number" class="form-control d-none" id="id" name="id" placeholder="id" asp-for="@servicio.id">
+                  <button type="submit"class="btn btn-danger" href="">Eliminar</button>
+                </form>
+              </div>
+            </td>
+        </tr>
+    }
   </tbody>
 </table>

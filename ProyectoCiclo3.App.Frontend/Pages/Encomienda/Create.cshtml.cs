@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
- 
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
     public class FormEncomiendaModel : PageModel
@@ -35,5 +34,4 @@ namespace ProyectoCiclo3.App.Frontend.Pages
             return RedirectToPage("./List");
         }
     }
- 
 }
