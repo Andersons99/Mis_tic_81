@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qbvdTREC5jF1hGg1PoYHlw4uctI9YOMN2D/4T7iahiGRhRDkd+wftb1vDJRdaEHlSX6qYWn98VVlQAsppqycYQ==",
+  "dgSpecHash": "TEGESg9zaZuntbxKLhNFWQL50wwJ7CfPtj3tKcHJZtGrZ70VIp7snAhhqqvLqn70QOLMTuCvW3HwJk86bFggWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anderson Sachez\\Desktop\\ProyectoG81\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
+  "projectFilePath": "C:\\Users\\Anderson Sachez\\Desktop\\Proyecto81Ciclo3\\ProyectoCiclo3.App.Frontend\\ProyectoCiclo3.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anderson Sachez\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Anderson Sachez\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
