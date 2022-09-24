@@ -6,13 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using ProyectoCiclo3.App.Persistencia.AppRepositorios;
 using ProyectoCiclo3.App.Dominio;
+using Microsoft.AspNetCore.Authorization;
 namespace ProyectoCiclo3.App.Frontend.Pages
 {
+    [Authorize]
     public class ListEncomiendaModel : PageModel
     {
        
         private readonly RepositorioEncomiendas repositorioEncomiendas;
         public IEnumerable<Encomienda> Encomiendas {get;set;}
+        [TempData]
+        public bool Error {get;set;}
         [BindProperty]
         public Encomienda Encomienda {get;set;}
         public ListEncomiendaModel(RepositorioEncomiendas repositorioEncomiendas)
@@ -27,7 +31,7 @@ namespace ProyectoCiclo3.App.Frontend.Pages
         {
             if(Encomienda.id>0)
             {
-                repositorioEncomiendas.Delete(Encomienda.id);
+               Error = repositorioEncomiendas.Delete(Encomienda.id);
             }
             return RedirectToPage("./List");
         }
